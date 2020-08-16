@@ -5,7 +5,6 @@ import os
 import face_recognition
 from datetime import datetime
 from imutils.video import VideoStream
-from google.colab.patches import cv2_imshow
 
 
 #Stage2: Identify the path of images used for training
@@ -82,7 +81,7 @@ while (cap.isOpened()):
 
           for top, right, bottom, left in face_locations:
               cv2.rectangle(pics, (left, top), (right, bottom), (0, 0,255), 2)
-              cv2_imshow(pics)
+              cv2.imshow(pics)
 
   #Stage9: Match and attendance feature
           if faceMatch[matchIndicator]:

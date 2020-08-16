@@ -37,10 +37,15 @@ def takeAttendance(studentNames,timestamp):
             timestamp_in_secs = int(timestamp/1000)
             secs = int(timestamp_in_secs%60)
             mins = int(timestamp_in_secs/60)
-            if secs < 10:
-              f.writelines(f'\n{name},{str(mins)+":0"+str(secs)}')
+            # Set status to late if they arrive after 5 mins
+            if mins>=5 and secs>0:
+                status = 'Late'
             else:
-              f.writelines(f'\n{name},{str(mins)+":"+str(secs)}')
+                status = 'On time'
+            if secs < 10:
+              f.writelines(f'\n{name},{str(mins)+":0"+str(secs),{status}')
+            else:
+              f.writelines(f'\n{name},{str(mins)+":"+str(secs),{status}')
 
 
         print(trackData)

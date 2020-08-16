@@ -27,3 +27,39 @@ The boxes are added around the faces and this will be run through the demo video
 
 
 ### Stage 2: Session Engagement Reports
+After the virtual meeting is over, the chat and conversation is analysed to produced Engagement reports for each participant based on their contributions. This includes a PDF file which contains all data visualizations and a CSV file containing the report summary. This feature was built using Python, SpeechRecognition and Matplotlib. The dependencies that were used are listed below:
+1. speech_recognition
+2. pyaudio
+3. os
+4. pydub AudioSegment
+5. pydub.silence split_on_silence
+6. wave
+7. contextlib
+8. pandas as pd
+9. numpy as np
+10. matplotlib.pyplot as plt
+11. matplotlib.backends.backend_pdf import PdfPages
+12. datetime
+13. argparse
+
+Once these dependencies are installed, they can be imported using the following commands:
+```
+import speech_recognition as sr
+import pyaudio
+import os 
+from pydub import AudioSegment
+from pydub.silence import split_on_silence
+import wave
+import contextlib
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_pdf import PdfPages
+import datetime
+import argparse
+
+```
+
+To produce the PDF and CSV Engagement Reports on a demo, run the EngagementAnalysis.py script by passing command line arguments for paths to the example chat and audio files (default settings to files in ZoomDemo folder).  You can also use a command line argument -t to set a custom PDF title. This will then export a PDF and CSV file into the same directory as the python script. To avoid a RuntimeWarning in your command prompt, you can try running the main script as 'python -W EngagementAnalysis.py' instead.
+
+There is also a walk-through Jupyter Notebook available in the same folder to demonstrate how the report was produced and contains further clarification on methods. All files exported from this notebook is stored in the GraphReports folder. Note that this feature should run real-time speech engagement analysis in an ideal application(through video conferencing platforms), thus person classification was hard-coded in this project for demonstration purposes only.

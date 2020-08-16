@@ -1,4 +1,4 @@
-## YesProf!:Novel-Based Approach to Facilitate Virtual Learning
+## YesProf! : Novel-Based Approach to Facilitate Virtual Learning
 
 This technology consists of two significant entities that include attendence tracking feature using face recognition and pdf-generated engagement session report. It purely fulfills its purpose of providing student data such as attendance and reports to instructors to track their students' progress and drive them in the correct path of achievement. 
 
